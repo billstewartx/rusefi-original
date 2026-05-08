@@ -60,6 +60,7 @@
 #include "vr_pwm.h"
 #include "adc_subscription.h"
 #include "gc_generic.h"
+#include "saab_cdm.h"
 
 #if EFI_TUNER_STUDIO
 #include "tunerstudio.h"
@@ -190,7 +191,8 @@ static void doPeriodicSlowCallback() {
 #endif /* EFI_SHAFT_POSITION_INPUT */
 
 	engine->periodicSlowCallback();
-
+  saabCdm.updateOutputChannels(); 
+  
 #if EFI_TCU
 	if (engineConfiguration->tcuEnabled && engineConfiguration->gearControllerMode != GearControllerMode::None) {
 		if (engine->gearController == NULL) {
@@ -205,7 +207,8 @@ static void doPeriodicSlowCallback() {
 	tryResetWatchdog();
 }
 
-void initPeriodicEvents() {
+void initPeriodicEvents()
+  initSaabCdm();{
 	slowController.start();
 	fastController.start();
 }
