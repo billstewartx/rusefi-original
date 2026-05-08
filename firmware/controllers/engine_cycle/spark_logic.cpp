@@ -8,7 +8,7 @@
 #include "pch.h"
 
 #include "spark_logic.h"
-
+#include "saab_cdm.h"
 #include "utlist.h"
 #include "event_queue.h"
 
@@ -668,6 +668,7 @@ void onTriggerEventSparkLogic(float rpm, efitick_t edgeTimestamp, float currentP
 #endif // EFI_ANTILAG_SYSTEM
 
 			scheduleSparkEvent(limitedSpark, event, rpm, dwellMs, dwellAngle, sparkAngle, edgeTimestamp, currentPhase, nextPhase);
+      saabCdm.onIgnitionFiring(i, sparkAngle);
 		}
 	}
 }
