@@ -30,7 +30,7 @@ CONTROLLERS_SENSORS_SRC_CPP = \
 	$(PROJECT_DIR)/controllers/sensors/cdm/saab_cdm.cpp \
 	$(PROJECT_DIR)/controllers/sensors/converters/fuel_level_func.cpp \
 	$(PROJECT_DIR)/controllers/sensors/vr_pwm.cpp
-
+  CONTROLLERS_SENSORS_INC += $(CONTROLLERS_SENSORS_DIR)/cdm
 
 CONTROLLERS_SENSORS_INC=\
     $(CONTROLLERS_DIR)/sensors \
