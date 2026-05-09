@@ -207,11 +207,12 @@ static void doPeriodicSlowCallback() {
 	tryResetWatchdog();
 }
 
-void initPeriodicEvents()
-  initSaabCdm(); {
+void initSaabCdm();
+  initPeriodicEvents() {
 	slowController.start();
 	fastController.start();
 }
+
 
 char * getPinNameByAdcChannel(const char *msg, adc_channel_e hwChannel, char *buffer, size_t bufferSize) {
 #if HAL_USE_ADC
