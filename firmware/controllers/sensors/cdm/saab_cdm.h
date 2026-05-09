@@ -47,6 +47,7 @@
 
 #include "global.h"
 #include "efi_gpio.h"
+#include "digital_input_exti.h"
 
 // Uncomment this line ONLY after you have added the cdm fields to
 // output_channels_s in tunerstudio_outputs.h (see tunerstudio_outputs.h.addition).
