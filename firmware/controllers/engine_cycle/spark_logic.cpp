@@ -8,7 +8,7 @@
 #include "pch.h"
 
 #include "spark_logic.h"
-#include "saab_cdm.h"
+#include "controllers/sensors/cdm/saab_cdm.h"
 #include "utlist.h"
 #include "event_queue.h"
 
