@@ -208,7 +208,7 @@ static void doPeriodicSlowCallback() {
 }
 
 void initPeriodicEvents()
-  initSaabCdm();{
+  initSaabCdm(); {
 	slowController.start();
 	fastController.start();
 }
