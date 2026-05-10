@@ -85,7 +85,7 @@
 #endif
 
 #ifndef EFI_CDM_INTEGRATION
-#define EFI_CDM_INTEGRATION FALSE
+#define EFI_CDM_INTEGRATION TRUE
 #endif
 
 #ifndef EFI_TOOTH_LOGGER
