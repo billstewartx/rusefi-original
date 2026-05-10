@@ -64,7 +64,7 @@ void ionPostState(output_channels_s *tsOutputChannels) {
 }
 #endif /* EFI_TUNER_STUDIO */
 
-static void extIonCallback(void *arg) {
+static void extIonCallback(void *arg, long long int /*timestamp*/) {
         UNUSED(arg);
         instance.totalCdmEvents++;
 
