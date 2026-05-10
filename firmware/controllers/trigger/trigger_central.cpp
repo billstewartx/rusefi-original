@@ -13,7 +13,6 @@
 #include "main_trigger_callback.h"
 #include "listener_array.h"
 #include "logic_analyzer.h"
-#include "knock_logic.h"
 #include "local_version_holder.h"
 #include "trigger_simulator.h"
 #include "trigger_emulator_algo.h"
