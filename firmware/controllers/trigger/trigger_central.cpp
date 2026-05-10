@@ -917,7 +917,7 @@ void TriggerCentral::handleShaftSignal(trigger_event_e signal, efitick_t timesta
 #if EFI_CDM_INTEGRATION
     if (eventIndex == 0 && isBrainPinValid(engineConfiguration->cdmInputPin)) {
         int cdmKnockValue = getCurrentCdmValue(getTriggerCentral()->triggerState.getSynchronizationCounter());
-        engine->module<KnockControllerBase>()->onKnockSenseCompleted(0, (float)cdmKnockValue, getTimeNowNt());
+        engine->module<KnockController>()->onKnockSenseCompleted(0, (float)cdmKnockValue, getTimeNowNt());
     }
 #endif /* EFI_CDM_INTEGRATION */
 
