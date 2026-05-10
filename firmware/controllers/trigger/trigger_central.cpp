@@ -18,6 +18,7 @@
 #include "trigger_simulator.h"
 #include "trigger_emulator_algo.h"
 #include "cdm_ion_sense.h"
+#include "knock_controller.h"
 #include "map_averaging.h"
 #include "main_trigger_callback.h"
 #include "status_loop.h"
