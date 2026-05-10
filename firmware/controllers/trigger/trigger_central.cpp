@@ -915,10 +915,10 @@ void TriggerCentral::handleShaftSignal(trigger_event_e signal, efitick_t timesta
 		expectedNextPhase = expectNextPhase;
 
 #if EFI_CDM_INTEGRATION
-		if (trgEventIndex == 0 && isBrainPinValid(engineConfiguration->cdmInputPin)) {
-			int cdmKnockValue = getCurrentCdmValue(getTriggerCentral()->triggerState.getSynchronizationCounter());
-			engine->knockLogic(cdmKnockValue);
-		}
+    if (eventIndex == 0 && isBrainPinValid(engineConfiguration->cdmInputPin)) {
+        int cdmKnockValue = getCurrentCdmValue(getTriggerCentral()->triggerState.getSynchronizationCounter());
+        engine->module<KnockControllerBase>()->onKnockSenseCompleted(0, (float)cdmKnockValue, getTimeNowNt());
+    }
 #endif /* EFI_CDM_INTEGRATION */
 
 		if (engine->rpmCalculator.getCachedRpm() > 0 && triggerIndexForListeners == 0) {
