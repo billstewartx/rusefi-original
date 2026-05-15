@@ -106,7 +106,8 @@ static void setupDefaultSensorInputs() {
 	// Digital channel 1 as default - others not set
 	engineConfiguration->triggerInputPins[0] = PROTEUS_DIGITAL_1;
 	engineConfiguration->camInputs[0] = Gpio::Unassigned;
-
+  engineConfiguration->cdmInputPin = PROTEUS_DIGITAL_5;
+  engineConfiguration->cdmInputPin2 = PROTEUS_DIGITAL_6;
 	engineConfiguration->triggerInputPins[1] = Gpio::Unassigned;
 
 
